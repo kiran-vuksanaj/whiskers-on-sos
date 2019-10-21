@@ -8,3 +8,6 @@ Worked on design document: component map, database layout diagram, and role assi
 
 chanM -- 2019-10-18 9:21
 Collaborated on design document: site map, deadlines
+
+chanM -- 2019-10-21 24:14
+Uploaded first finished version of design document
