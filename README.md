@@ -1,5 +1,12 @@
 # Smallpox Stories by Team SOS
-### Pass it Around!
+### Pass it Around!™
 
+##### Roster:
+- Coby Sontag
+- Hannah Fried
+- Matthew Chan (Project Manager)
+- Jionghao Wu
 
-© Team SOS 2019 -- Coby Sontag, Hannah Fried, Matthew Chan, Jionghao Wu
+<br><br><br>
+
+© 2019 Team SOS
