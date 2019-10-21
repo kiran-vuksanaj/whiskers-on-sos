@@ -1,9 +1,9 @@
 DEVLOG for Team SOS
 
-chanM -- 2019-10-18 21:32
+chanM -- 2019-10-17 21:32
 Set up GitHub repository and created DEVLOG
 
-chanM -- 2019-10-18 21:52
+chanM -- 2019-10-17 21:52
 Worked on design document: component map, database layout diagram, and role assignment
 
 chanM -- 2019-10-18 9:21
