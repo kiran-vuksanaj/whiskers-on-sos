@@ -11,3 +11,11 @@ Collaborated on design document: site map, deadlines
 
 chanM -- 2019-10-21 24:14
 Uploaded first finished version of design document
+
+chanM -- 2019-10-22 01:28
+Revised design document:
+ - clarified roles
+ - specified details of individual files and routes
+ - streamlined database design
+ - updated diagrams to match database changes
+ 
