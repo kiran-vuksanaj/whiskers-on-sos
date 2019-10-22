@@ -33,3 +33,9 @@ SQLite Operations: (clauses of the SELECT statement)
     CROSS-JOIN - combines every row from two tables (like matrix multiplication?)
                - no current forseen use with our current design
 
+chanM -- 2019-10-22 02:12
+From reading "Programming Sucks":
+ - Review each others' code and make sure no mistakes snowball into bigger ones
+ - Ask questions when in need of help
+ - COMMENTS
+ - Make reasonable deadlines so people can write 'good code' without shortcuts
