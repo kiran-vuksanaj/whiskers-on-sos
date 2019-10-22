@@ -19,3 +19,17 @@ Revised design document:
  - streamlined database design
  - updated diagrams to match database changes
  
+chanM -- 2019-10-22 01:56
+SQLite Operations: (clauses of the SELECT statement)
+    JOIN       - associates column data between tables in certain ways
+               - would be useful to correlate Usernames or Titles in different ways
+
+    INNER-JOIN - combines columns from correlated tables
+               - can be used to combine common Username/Author columns to see what contributions have been made
+
+    LEFT-JOIN  - includes all rows of one table and rows of another (if they exist, NULL if not)
+               - could use it for seeing contributions again in case users haven't made any contributions
+
+    CROSS-JOIN - combines every row from two tables (like matrix multiplication?)
+               - no current forseen use with our current design
+
