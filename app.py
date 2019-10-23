@@ -16,3 +16,13 @@ app = Flask(__name__)
 def hello_world():
     print(__name__)
     return "Hello World!"
+
+@app.route("/test")
+def test():
+    return render_template("base.html")
+
+
+
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
