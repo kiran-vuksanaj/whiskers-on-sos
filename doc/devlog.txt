@@ -40,5 +40,5 @@ From reading "Programming Sucks":
  - COMMENTS
  - Make reasonable deadlines so people can write 'good code' without shortcuts
 
-sontagC -- 2019-10-22 8:12
-Edited design.pdf to reflect improved database structure. Outlined necessary changes to site map but did not fix due to problems with Lucid chart.
+sontagC -- 2019-10-23 9:16
+Edited design.pdf to reflect improved database structure. Also fixed the site map.
