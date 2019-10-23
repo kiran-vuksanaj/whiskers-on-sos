@@ -42,3 +42,7 @@ From reading "Programming Sucks":
 
 sontagC -- 2019-10-23 9:16
 Edited design.pdf to reflect improved database structure. Also fixed the site map
+
+chanM -- 2019-10-22 11:16
+Created simple starting app.py
+Added /test route to test HTML frontend
