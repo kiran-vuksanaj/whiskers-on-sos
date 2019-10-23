@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<!-- A basic html template with title and content blocks -->
+<html>
+  <head>
+      {% block head %}
+      <title>
+      {% block title %}hello{% endblock %}
+      </title>
+      {% endblock %}
+  </head>
+  <body>
+    {% block content %}login page{% endblock %}
+    <form method = "GET" action = "/auth">
+  <input type="text" name="Username"><br>
+  <input type="submit" name="Submit">
+</form>
+  </body>
+</html>
