@@ -12,16 +12,20 @@ from flask import session
 from flask import flash
 app = Flask(__name__)
 
+# Simple initial working page
 @app.route("/")
 def hello_world():
     print(__name__)
     return "Hello World!"
 
+
+
+#================TEMPORARY====================================
+# For visualizing Frontend development using blocks
 @app.route("/test")
 def test():
     return render_template("base.html")
-
-
+#=============================================================
 
 if __name__ == "__main__":
     app.debug = True
