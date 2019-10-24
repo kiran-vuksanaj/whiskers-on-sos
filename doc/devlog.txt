@@ -65,3 +65,11 @@ chanM -- 2019-10-24 10:16
 Changed secret key to randomly generated string
 Temporarily disabled specific flashing error messages
 Removed temporary /test route
+
+chanM -- 2019-10-24 16:29
+Made form to route to new /login/auth route
+Changed route methods to POST
+Added flashing into login.html
+BUGS:
+ - need to fix database interacting library to pass the cursor from app.py
+ - need to add test user to be able to test /login in database
