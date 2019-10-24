@@ -11,6 +11,7 @@ from flask import url_for
 from flask import session
 from flask import flash
 import os
+import utl.db as db
 
 app = Flask(__name__)
 app.secret_key = os.urandom(32) # secret key set to randomly generated string
@@ -32,11 +33,11 @@ def login():
 
 # Authentication page for login
 # Flashes appropriate error messages
-@app.route("/login/authenticate")
+@app.route("/login/auth", methods = ["POST"])
 def authenticateLogin():
-    username = request.form("username")
-    password = request.form("password")
-    if authenticate(username, password):
+    username = request.form["username"]
+    password = request.form["password"]
+    if db.authenticate(username, password):
         return redirect("/home")
     '''
     =====TEMPORARILY NOT FLASHING=====
