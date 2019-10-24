@@ -60,3 +60,8 @@ Began writing routes in app.py, specifically login and associated authentication
 friedH -- 2019-10-24 9:35
 moved initialfil.py to utl and renamed to db.py
 added more functions to db.py, majority of work done
+
+chanM -- 2019-10-24 10:16
+Changed secret key to randomly generated string
+Temporarily disabled specific flashing error messages
+Removed temporary /test route
