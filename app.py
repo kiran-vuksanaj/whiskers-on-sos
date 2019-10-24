@@ -11,12 +11,34 @@ from flask import url_for
 from flask import session
 from flask import flash
 app = Flask(__name__)
+app.secret_key = 'COOKIES'
 
 # Simple initial working page
 @app.route("/")
 def hello_world():
     print(__name__)
-    return "Hello World!"
+    if 'username' in session:
+        return redirect("/home")
+    else:
+        return redirect("/login")
+        
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+@app.route("/login/authenticate")
+def authenticateLogin():
+    username = request.form("username")
+    password = request.form("password")
+    if authenticate(username, password):
+        return redirect("/home")
+    else if userExists?(username):
+        flash("incorrect password")
+        return redirect("/login")
+    else:
+        flash("username does not exist")
+        return redirect("/login")
+    
 
 
 
