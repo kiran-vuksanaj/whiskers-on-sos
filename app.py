@@ -16,7 +16,9 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     print(__name__)
-    return "Hello World!"
+    return render_template(
+		"login.html"
+		)
 
 
 
