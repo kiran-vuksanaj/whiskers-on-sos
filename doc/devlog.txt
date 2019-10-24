@@ -39,3 +39,17 @@ From reading "Programming Sucks":
  - Ask questions when in need of help
  - COMMENTS
  - Make reasonable deadlines so people can write 'good code' without shortcuts
+
+sontagC -- 2019-10-23 9:16
+Edited design.pdf to reflect improved database structure. Also fixed the site map
+
+chanM -- 2019-10-22 11:16
+Created simple starting app.py
+Added /test route to test HTML frontend
+
+friedH -- 2019-10-23 21:26
+added initialfile.py as a temporary location to store SQL function headers
+Some progress made on SQLite stuff in general
+
+friedH -- 2019-10-23 21:26
+pushed progress with initialfile.py which adds functionality to about half of the functions within the file
