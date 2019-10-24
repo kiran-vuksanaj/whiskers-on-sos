@@ -10,8 +10,10 @@ from flask import redirect
 from flask import url_for
 from flask import session
 from flask import flash
+import os
+
 app = Flask(__name__)
-app.secret_key = 'COOKIES'
+app.secret_key = os.urandom(32) # secret key set to randomly generated string
 
 # Simple initial working page
 @app.route("/")
@@ -32,12 +34,17 @@ def authenticateLogin():
     password = request.form("password")
     if authenticate(username, password):
         return redirect("/home")
+    '''
+    =====TEMPORARILY NOT FLASHING=====
     else if userExists?(username):
         flash("incorrect password")
         return redirect("/login")
     else:
         flash("username does not exist")
         return redirect("/login")
+    '''
+    flash("Error: something went wrong") # TEMP flash message placeholder
+    return redirect("/login")
 
 
 #================TEMPORARY====================================
