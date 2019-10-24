@@ -4,15 +4,11 @@
   <head>
       {% block head %}
       <title>
-      {% block title %}hello{% endblock %}
+      {% block title %}title{% endblock %}
       </title>
       {% endblock %}
   </head>
   <body>
-    {% block content %}login page{% endblock %}
-    <form method = "GET" action = "/auth">
-  <input type="text" name="Username"><br>
-  <input type="submit" name="Submit">
-</form>
+    {% block content %}content{% endblock %}
   </body>
 </html>

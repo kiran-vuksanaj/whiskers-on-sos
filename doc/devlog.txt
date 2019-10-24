@@ -50,3 +50,6 @@ Added /test route to test HTML frontend
 friedH -- 2019-10-23 21:26
 added initialfile.py as a temporary location to store SQL function headers
 Some progress made on SQLite stuff in general
+
+friedH -- 2019-10-23 21:26
+pushed progress with initialfile.py which adds functionality to about half of the functions within the file
