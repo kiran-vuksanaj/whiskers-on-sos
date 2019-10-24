@@ -56,3 +56,7 @@ pushed progress with initialfile.py which adds functionality to about half of th
 
 sontagC -- 2019-10-24 9:28
 Began writing routes in app.py, specifically login and associated authentication 
+
+friedH -- 2019-10-24 9:35
+moved initialfil.py to utl and renamed to db.py
+added more functions to db.py, majority of work done
