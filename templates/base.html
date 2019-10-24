@@ -2,17 +2,19 @@
 <!-- A basic html template with title and content blocks -->
 <html>
   <head>
-      {% block head %}
+      {% block header %}
       <title>
-      {% block title %}hello{% endblock %}
+      {% block title %}title{% endblock %}
       </title>
       {% endblock %}
   </head>
   <body>
-    {% block content %}login page{% endblock %}
-    <form method = "GET" action = "/auth">
-  <input type="text" name="Username"><br>
-  <input type="submit" name="Submit">
-</form>
+    {% block content %}content{% endblock %}
+  <footer>
+    {% block footer %}
+    &copy; Copyright 2019 by Smallpox Stories
+    {% endblock %}
+  </footer>
   </body>
+
 </html>

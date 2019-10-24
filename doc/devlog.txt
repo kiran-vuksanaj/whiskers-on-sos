@@ -51,5 +51,8 @@ friedH -- 2019-10-23 21:26
 added initialfile.py as a temporary location to store SQL function headers
 Some progress made on SQLite stuff in general
 
+friedH -- 2019-10-23 21:26
+pushed progress with initialfile.py which adds functionality to about half of the functions within the file
+
 sontagC -- 2019-10-24 9:28
 Began writing routes in app.py, specifically login and associated authentication 

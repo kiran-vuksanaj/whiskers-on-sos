@@ -38,8 +38,6 @@ def authenticateLogin():
     else:
         flash("username does not exist")
         return redirect("/login")
-    
-
 
 
 #================TEMPORARY====================================
