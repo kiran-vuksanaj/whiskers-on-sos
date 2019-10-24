@@ -2,7 +2,7 @@
 <!-- A basic html template with title and content blocks -->
 <html>
   <head>
-      {% block head %}
+      {% block header %}
       <title>
       {% block title %}title{% endblock %}
       </title>
@@ -10,5 +10,11 @@
   </head>
   <body>
     {% block content %}content{% endblock %}
+  <footer>
+    {% block footer %}
+    &copy; Copyright 2019 by Smallpox Stories
+    {% endblock %}
+  </footer>
   </body>
+
 </html>
