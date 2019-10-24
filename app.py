@@ -47,12 +47,6 @@ def authenticateLogin():
     return redirect("/login")
 
 
-#================TEMPORARY====================================
-# For visualizing Frontend development using blocks
-@app.route("/test")
-def test():
-    return render_template("base.html")
-#=============================================================
 
 if __name__ == "__main__":
     app.debug = True
