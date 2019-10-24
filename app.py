@@ -15,7 +15,8 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(32) # secret key set to randomly generated string
 
-# Simple initial working page
+# Landing page to check if user is logged in
+# Redirects to either /home or /login
 @app.route("/")
 def hello_world():
     print(__name__)
@@ -23,11 +24,14 @@ def hello_world():
         return redirect("/home")
     else:
         return redirect("/login")
-        
+
+# Login page
 @app.route("/login")
 def login():
     return render_template("login.html")
 
+# Authentication page for login
+# Flashes appropriate error messages
 @app.route("/login/authenticate")
 def authenticateLogin():
     username = request.form("username")
