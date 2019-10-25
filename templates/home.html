@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Smallpox Stories
+{% endblock %}
+
+{% block content %}
+WELCOME {{user}}
+<form action="/cancel">
+	<input type="submit" name="sub1" value="Cancel" > <br>
+</form>
+
+<form action="/create">
+	<input type="submit" name="sub1" value="Creat a New Story" > <br>
+</form>
+
+<form action="/Browse">
+	<input type="submit" name="sub1" value="Browse Stories" > <br>
+</form>
+
+{% endblock %}
