@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title> Successful Login </title>
-  </head>
-  <body>
-    <h1> You have successfully logged in! </h1>
-    <h1> Hi {{user}}!</h1>
-    <form action = "/logout">
-      <input type = "submit" name = "sub2" value = "logout">
-    </form>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+Successful Login
+{% endblock %}
+
+{% block content %}
+<h1> You have successfully logged in! </h1>
+<h1> Hi {{user}}!</h1>
+<form action = "/home">
+  <input type = "submit" name = "sub2" value = "logout">
+</form>
+{% endblock %}
