@@ -12,12 +12,12 @@ Login
 {% endfor %}
 </H3>
 
-<form action = "/authenticate/login", method = "POST">
+<form action = "/authenticate/login", method = "GET">
     Enter your username:
     <input type = "text" name = "username"> <br>
     Enter your password:
     <input type = "text" name = "password"> <br>
-    <input type = "submit" name = "sub1" value = "login"> <br>
+    <input type = "submit" name = "sub" value = "login"> <br>
 </form>
 
 {% endblock %}

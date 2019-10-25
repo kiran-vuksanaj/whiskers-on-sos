@@ -5,14 +5,14 @@ Register
 {% endblock %}
 
 {% block content %}
-<!-- <H3>
+<H3>
 {% set msgs = get_flashed_messages() %}
 {% for msg in msgs %}
 	{{ msg }}
 {% endfor %}
-</H3> -->
+</H3>
 
-<form action = "/login/Register", method = "POST">
+<form action = "/login/Register", method = "GET">
     Enter a username:
     <input type = "text" name = "username" maxlength="12"> <br>
     Enter a password:
@@ -20,7 +20,7 @@ Register
     <input type = "submit" name = "sub1" value = "Register">
 </form>
 <form action="/cancel">
-	<input type="submit" name="sub1" value="Cancel" >
+	<input type="submit" name="sub2" value="Cancel" >
 </form>
 
 {% endblock %}
