@@ -16,8 +16,8 @@ import utl.db as db
 app = Flask(__name__)
 app.secret_key = os.urandom(32) # secret key set to randomly generated string
 
-# Landing page to check if user is logged in
-# Redirects to either /home or /login
+# Landing page
+# Checks if user is logged in and redirects to either /home or /login
 @app.route("/")
 def hello_world():
     print(__name__)
