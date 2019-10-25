@@ -42,16 +42,18 @@ def login():
     return render_template("login.html")
 
 # Authentication page for login
+# Adds username to session
 # Flashes appropriate error messages
-@app.route("/login/auth", methods = ["POST"])
+@app.route("/authenticate/login", methods = ["POST"])
 def authenticateLogin():
     username = request.form["username"]
     password = request.form["password"]
     if db.authenticate(cursor, username, password):
+        session['username'] = username
         return redirect("/home")
     '''
     =====TEMPORARILY NOT FLASHING=====
-    else if userExists?(username):
+    else if !db.uniqueUsername(username):
         flash("incorrect password")
         return redirect("/login")
     else:
