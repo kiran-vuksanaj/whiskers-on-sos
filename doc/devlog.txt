@@ -115,3 +115,6 @@ fixed faulty logic in the database package we made
 
 chanM -- 2019-10-25 10:01
 Added information on How To Run in the README.md
+
+sontagC -- 2019-10-25 10:27
+Added host=0.0.0.0 on the run command so app viewable by IP address
