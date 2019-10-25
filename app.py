@@ -10,8 +10,18 @@ from flask import redirect
 from flask import url_for
 from flask import session
 from flask import flash
+import sqlite3
 import os
 import utl.db as db
+
+#=======================================
+connector = sqlite3.connect("smallpox.db", check_same_thread=False)
+cursor = connector.cursor()
+# create table of users with a username and password tab
+cursor.execute("CREATE TABLE IF NOT EXISTS users(Username TEXT UNIQUE PRIMARY KEY, Password TEXT);")
+# create stories table with title, entries and author columns
+cursor.execute("CREATE TABLE IF NOT EXISTS stories(Title TEXT UNIQUE PRIMARY KEY, Entries TEXT, Author TEXT);")
+#=======================================
 
 app = Flask(__name__)
 app.secret_key = os.urandom(32) # secret key set to randomly generated string
@@ -37,7 +47,7 @@ def login():
 def authenticateLogin():
     username = request.form["username"]
     password = request.form["password"]
-    if db.authenticate(username, password):
+    if db.authenticate(cursor, username, password):
         return redirect("/home")
     '''
     =====TEMPORARILY NOT FLASHING=====
@@ -56,3 +66,6 @@ def authenticateLogin():
 if __name__ == "__main__":
     app.debug = True
     app.run()
+
+connector.commit() # save changes
+connector.close()  # close database
