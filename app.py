@@ -14,14 +14,14 @@ import sqlite3
 import os
 import utl.db as db
 
-#=======================================
+#=====SQLITE3 INITIALIZING CODE==================================
 connector = sqlite3.connect("smallpox.db", check_same_thread=False)
 cursor = connector.cursor()
 # create table of users with a username and password tab
 cursor.execute("CREATE TABLE IF NOT EXISTS users(Username TEXT UNIQUE PRIMARY KEY, Password TEXT);")
 # create stories table with title, entries and author columns
 cursor.execute("CREATE TABLE IF NOT EXISTS stories(Title TEXT UNIQUE PRIMARY KEY, Entries TEXT, Author TEXT);")
-#=======================================
+#================================================================
 
 app = Flask(__name__)
 app.secret_key = os.urandom(32) # secret key set to randomly generated string
@@ -60,6 +60,10 @@ def authenticateLogin():
     '''
     flash("Error: something went wrong") # TEMP flash message placeholder
     return redirect("/login")
+
+@app.route("/home")
+def homePage():
+    return render_template("home.html")
 
 
 
