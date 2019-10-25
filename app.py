@@ -51,9 +51,7 @@ def authenticateLogin():
     if db.authenticate(cursor, username, password):
         session['username'] = username
         return redirect("/home")
-    '''
-    =====TEMPORARILY NOT FLASHING=====
-    elif db.uniqueUsername(username):
+    elif db.uniqueUsername(cursor, username):
         flash("username does not exist")
         return redirect("/login")
     else:
@@ -61,7 +59,7 @@ def authenticateLogin():
         return redirect("/login")
     '''
     flash("Error: something went wrong") # TEMP flash message placeholder
-    return redirect("/login")
+    return redirect("/login")'''
 
 # Home page
 @app.route("/home")

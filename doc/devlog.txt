@@ -18,7 +18,7 @@ Revised design document:
  - specified details of individual files and routes
  - streamlined database design
  - updated diagrams to match database changes
- 
+
 chanM -- 2019-10-22 01:56
 SQLite Operations: (clauses of the SELECT statement)
     JOIN       - associates column data between tables in certain ways
@@ -55,11 +55,11 @@ friedH -- 2019-10-23 21:26
 pushed progress with initialfile.py which adds functionality to about half of the functions within the file
 
 sontagC -- 2019-10-24 9:28
-Began writing routes in app.py, specifically login and associated authentication 
+Began writing routes in app.py, specifically login and associated authentication
 
 wuJ -- 2019-10-24 9:34
-Began on base.html, login.html and welcome.html. 
-Able to login but not direct to another page yet 
+Began on base.html, login.html and welcome.html.
+Able to login but not direct to another page yet
 
 friedH -- 2019-10-24 9:35
 moved initialfil.py to utl and renamed to db.py
@@ -77,7 +77,7 @@ Added flashing into login.html
 BUGS:
  - need to fix database interacting library to pass the cursor from app.py
  - need to add test user to be able to test /login in database
- 
+
 friedH -- 2019-10-24 22:06
 finished all necessary functions in db library,
 need to have them properly tested and checked.
@@ -102,3 +102,6 @@ BUGFIXES:
 chanM -- 2019-10-25 01:44
 Added \home route and linked to home.html
 Finished creating updateDevlog.py script
+
+sontagC -- 2019-10-25 08:51
+Fixed accurate error flashing for login
