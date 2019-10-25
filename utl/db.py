@@ -37,21 +37,21 @@ def authenticate(curse, username, password): # return true if the username/passw
 
 def getFullStory(curse, title): # return a list of every entry associated with a story within a list for the story
     textEntries = []
-    storyTuple = curse.execute("SELECT Entries FROM stories WHERE Title = %s;" % title)
-    for currentStory in storyTuple:
-        textEntries.append(currentStory)
+    cursorObject = curse.execute("SELECT Entries FROM stories WHERE Title = %s;" % title)
+    for storyTuple in cursorObject:
+        textEntries.append(storyTuple[0])
     return textEntries
 
 def getContributedStories(curse, username): # return a set of the titles of every story contributed to by an author
     contributedStories = []
-    titleTuple = curse.execute("SELECT Titles FROM stories WHERE Author = %s;" % username)
-    for currentTitle in titleTuple:
-        contributedStories.append(currentTitle)
+    cursorObject = curse.execute("SELECT Titles FROM stories WHERE Author = %s;" % username)
+    for titleTuple in cursorObject:
+        contributedStories.append(titleTuple[0])
     return set(contributedStories)
 
 def getOtherStories(curse, username): # return a set of the titles of every NOT story contributed to by an author
     notContributedStories = []
-    titlesTuple = curse.execute("SELECT Titles FROM stories WHERE Author != %s;" % username)
-    for currentTitle in titlesTuple:
-        notContributedStories.append(currentTitle)
+    cursorObject = curse.execute("SELECT Titles FROM stories WHERE Author != %s;" % username)
+    for titlesTuple in cursorObject:
+        notContributedStories.append(titlesTuple[0])
     return set(notContributedStories)

@@ -109,3 +109,6 @@ Fixed accurate error flashing for login
 wuJ -- 2019-10-25 9:07
 added character limit parameter.
 changed parameters on html.
+
+friedH -- 2019-10-25 09:06
+fixed faulty logic in the database package we made
