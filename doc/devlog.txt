@@ -86,3 +86,15 @@ Likely to occur tomorrow.
 wuJ -- 2019-10-24 23:17
 added html files for register and and home page.
 need to test it with the backend code tomorrow.
+
+chanM -- 2019-10-24 23:37
+Fixed commmenting consistencies in db.py library
+Revamped db.py functions to take a cursor as first parameter
+Added test account in user table in order to test login functionality:
+ - Username: "test"
+ - Password: "123"
+Got logging in functionality working using test account
+Removed unecessary code comments in db.py
+BUGFIXES:
+ - "need to fix database interacting library to pass the cursor from app.py" -- from 2019-10-24 16:29
+ - "need to add test user to be able to test /login in database" -- from 2019-10-24 16:29
