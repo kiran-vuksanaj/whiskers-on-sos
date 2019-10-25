@@ -105,3 +105,7 @@ Finished creating updateDevlog.py script
 
 sontagC -- 2019-10-25 08:51
 Fixed accurate error flashing for login
+
+wuJ -- 2019-10-25 9:07
+added character limit parameter.
+changed parameters on html.
