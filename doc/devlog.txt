@@ -112,3 +112,6 @@ changed parameters on html.
 
 friedH -- 2019-10-25 09:06
 fixed faulty logic in the database package we made
+
+chanM -- 2019-10-25 10:01
+Added information on How To RUn in the README.md
