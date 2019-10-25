@@ -20,7 +20,7 @@
             . <name of vitrual environment>/bin/activate    # activates the virtual environment
             pip3 install flask                              # installs flask Python mode
             deactivate                                      # deactivated the virtual environment
-        - _Note: you must have the virtual environment activated to complete Step #_
+        - _Note: you must have the virtual environment activated to complete Step #4_
 2. Clone the project repository
 
         git clone https://github.com/MattChann/softdev-p00.git
