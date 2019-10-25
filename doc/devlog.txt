@@ -82,3 +82,7 @@ friedH -- 2019-10-24 22:06
 finished all necessary functions in db library,
 need to have them properly tested and checked.
 Likely to occur tomorrow.
+
+wuJ -- 2019-10-24 23:17
+added html files for register and and home page.
+need to test it with the backend code tomorrow.
