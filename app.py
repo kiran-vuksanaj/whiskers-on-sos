@@ -53,16 +53,17 @@ def authenticateLogin():
         return redirect("/home")
     '''
     =====TEMPORARILY NOT FLASHING=====
-    else if !db.uniqueUsername(username):
-        flash("incorrect password")
+    elif db.uniqueUsername(username):
+        flash("username does not exist")
         return redirect("/login")
     else:
-        flash("username does not exist")
+        flash("incorrect password")
         return redirect("/login")
     '''
     flash("Error: something went wrong") # TEMP flash message placeholder
     return redirect("/login")
 
+# Home page
 @app.route("/home")
 def homePage():
     return render_template("home.html")
