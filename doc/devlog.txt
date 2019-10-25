@@ -98,3 +98,7 @@ Removed unecessary code comments in db.py
 BUGFIXES:
  - "need to fix database interacting library to pass the cursor from app.py" -- from 2019-10-24 16:29
  - "need to add test user to be able to test /login in database" -- from 2019-10-24 16:29
+
+chanM -- 2019-10-25 01:44
+Added \home route and linked to home.html
+Finished creating updateDevlog.py script
