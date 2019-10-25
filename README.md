@@ -2,10 +2,10 @@
 ### Pass it Around!™
 
 ##### Roster:
-- Coby Sontag
-- Hannah Fried
-- Matthew Chan (Project Manager)
-- Jionghao Wu
+- Coby Sontag: Backend
+- Hannah Fried: Database
+- Matthew Chan: Project Manager, Full Stack Management
+- Jionghao Wu: Frontend
 
 <br><br><br>
 
