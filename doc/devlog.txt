@@ -57,6 +57,10 @@ pushed progress with initialfile.py which adds functionality to about half of th
 sontagC -- 2019-10-24 9:28
 Began writing routes in app.py, specifically login and associated authentication 
 
+wuJ -- 2019-10-24 9:34
+Began on base.html, login.html and welcome.html. 
+Able to login but not direct to another page yet 
+
 friedH -- 2019-10-24 9:35
 moved initialfil.py to utl and renamed to db.py
 added more functions to db.py, majority of work done
@@ -73,3 +77,4 @@ Added flashing into login.html
 BUGS:
  - need to fix database interacting library to pass the cursor from app.py
  - need to add test user to be able to test /login in database
+ 
