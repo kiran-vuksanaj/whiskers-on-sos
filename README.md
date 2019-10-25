@@ -1,7 +1,7 @@
 # Smallpox Stories by Team SOS
 ### Pass it Around!™
 
-##### Roster:
+### Roster:
 - Coby Sontag: Backend
 - Hannah Fried: Database
 - Matthew Chan: Project Manager, Full Stack Management
