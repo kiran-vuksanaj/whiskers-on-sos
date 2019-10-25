@@ -78,3 +78,7 @@ BUGS:
  - need to fix database interacting library to pass the cursor from app.py
  - need to add test user to be able to test /login in database
  
+friedH -- 2019-10-24 22:06
+finished all necessary functions in db library,
+need to have them properly tested and checked.
+Likely to occur tomorrow.
