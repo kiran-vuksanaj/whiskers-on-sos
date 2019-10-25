@@ -5,7 +5,7 @@
 import sqlite3   #enable control of an sqlite database
 
 
-connector = sqlite3.connect("smallpox.db")
+connector = sqlite3.connect("smallpox.db", check_same_thread=False)
 curse = connector.cursor()
 curse.execute("CREATE TABLE IF NOT EXISTS users(Username TEXT UNIQUE PRIMARY KEY, Password TEXT);")#create table of users with a username and password tab
 curse.execute("CREATE TABLE IF NOT EXISTS stories(Title TEXT UNIQUE PRIMARY KEY, Entries TEXT, Author TEXT);")#create stories table with title, entries and author columns

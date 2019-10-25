@@ -10,10 +10,14 @@ from flask import redirect
 from flask import url_for
 from flask import session
 from flask import flash
-app = Flask(__name__)
-app.secret_key = 'COOKIES'
+import os
+import utl.db as db
 
-# Simple initial working page
+app = Flask(__name__)
+app.secret_key = os.urandom(32) # secret key set to randomly generated string
+
+# Landing page to check if user is logged in
+# Redirects to either /home or /login
 @app.route("/")
 def hello_world():
     print(__name__)
@@ -21,31 +25,33 @@ def hello_world():
         return redirect("/home")
     else:
         return redirect("/login")
-        
+
+# Login page
 @app.route("/login")
 def login():
     return render_template("login.html")
 
-@app.route("/login/authenticate")
+# Authentication page for login
+# Flashes appropriate error messages
+@app.route("/login/auth", methods = ["POST"])
 def authenticateLogin():
-    username = request.form("username")
-    password = request.form("password")
-    if authenticate(username, password):
+    username = request.form["username"]
+    password = request.form["password"]
+    if db.authenticate(username, password):
         return redirect("/home")
+    '''
+    =====TEMPORARILY NOT FLASHING=====
     else if userExists?(username):
         flash("incorrect password")
         return redirect("/login")
     else:
         flash("username does not exist")
         return redirect("/login")
+    '''
+    flash("Error: something went wrong") # TEMP flash message placeholder
+    return redirect("/login")
 
 
-#================TEMPORARY====================================
-# For visualizing Frontend development using blocks
-@app.route("/test")
-def test():
-    return render_template("base.html")
-#=============================================================
 
 if __name__ == "__main__":
     app.debug = True
