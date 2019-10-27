@@ -98,7 +98,7 @@ def authenticateLogin():
 # Adds username to session if unique
 # Flashes existing user error message
 @app.route("/register/authenticate", methods = ["POST"])
-def authenticateLogin():
+def authenticateRegister():
     print(__name__)
     username = request.form["username"]
     password = request.form["password"]
