@@ -184,3 +184,6 @@ List of titles has a header
 chanM -- 2019-10-27 00:34
 Fixed Jinja rendering of buttons when browsing stories
 Changed database getContributedStories to return a list instead of a set
+
+sontagC -- 2019-10-27 00:40
+Changed contribute method to GET
