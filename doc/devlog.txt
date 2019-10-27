@@ -179,3 +179,7 @@ Also checked for username(and if not redirect to login) everywhere I try to grab
 Also passed title to /contribute
 Updated design doc
 Creat on home -> "create"
+
+chanM -- 2019-10-27 00:34
+Fixed Jinja rendering of buttons when browsing stories
+Changed database getContributedStories to return a list instead of a set
