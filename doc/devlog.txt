@@ -150,3 +150,6 @@ Wrote create/authenticate routes
 
 friedH -- 2019-10-26 22:20
 fixed more faulty db logic
+
+sontagC -- 2019-10-26 22:24
+Fixed form action in create to go to create/authenticate
