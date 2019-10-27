@@ -150,3 +150,6 @@ Wrote create/authenticate routes
 
 friedH -- 2019-10-26 22:20
 fixed more faulty db logic
+
+chanM -- 2019-10-26 22:34
+Fixed sqlite error with registering stemming from errors within database functions
