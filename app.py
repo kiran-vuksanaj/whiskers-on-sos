@@ -48,7 +48,10 @@ def login():
 @app.route("/home")
 def home():
     print(__name__)
-    return render_template("home.html", user=session['username'])
+    if 'username' not in session:
+        return redirect("/login")
+    username=session['username']
+    return render_template("home.html", user=username)
 
 # Register page
 @app.route("/register")
@@ -75,7 +78,10 @@ def browse():
 @app.route("/contribute")
 def contribute():
     print(__name__)
-    return render_template("contribute.html", user=session['username'])
+    if 'username' not in session:
+        return redirect("/login")
+    username=session['username']
+    return render_template("contribute.html", user=username)
 
 #=====RENDERING LOGIC PAGES======================================
 
