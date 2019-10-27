@@ -20,10 +20,10 @@ def uniqueUsername(curse, username): # return a boolean for whether or not a giv
     return True
 
 def addUser(curse, username, password): # add a row to the users database, with the given username/passwrd combo. Return nothing.
-    curse.execute("INSERT INTO users (Username, Password) VALUES("+username+","+password+");")
+    curse.execute("INSERT INTO users VALUES("+username+","+password+");")
 
 def addEntry(curse, title, entry, author): # add a row to the stories database, with the given title/entry/author combo. Return nothing.
-    curse.execute("INSERT INTO stories (Title, Entries, Author) VALUES("+title+","+entry+","+author+");")
+    curse.execute("INSERT INTO stories VALUES("+title+","+entry+","+author+");")
 
 #=====TEMPORARILY Returning simple Booleans=====
 def authenticate(curse, username, password): # return true if the username/password combo exists within the database, otherwise return false.
