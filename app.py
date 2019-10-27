@@ -48,7 +48,7 @@ def login():
 @app.route("/home")
 def home():
     print(__name__)
-    return render_template("home.html")
+    return render_template("home.html", user=session['username'])
 
 # Register page
 @app.route("/register")
@@ -66,13 +66,13 @@ def create():
 @app.route("/browse")
 def browse():
     print(__name__)
-    return render_template("browse.html")
+    return render_template("browse.html", user=session['username'])
 
 # Contribution page
 @app.route("/contribute")
 def contribute():
     print(__name__)
-    return render_template("contribute.html")
+    return render_template("contribute.html", user=session['username'])
 
 #=====RENDERING LOGIC PAGES======================================
 
@@ -128,7 +128,15 @@ def authenticateCreate():
     else:                                               #Non unique title, try again
         flash("title not unique")
         return redirect("/create")
-
+'''
+# Authentication page for create
+# Addes story to DB if unique title
+# Flashes success or non unique title error
+@app.route("/contribute/authenticate", methods = ["POST"])
+def authenticateContribute():
+    print(__name__)
+    if 'username' not in sessio
+'''
 
 if __name__ == "__main__":
     app.debug = True
