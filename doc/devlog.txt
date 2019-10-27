@@ -177,3 +177,4 @@ sontagC -- 2019-10-26 23:43
 Added flashing messages to home.html to avoid bugs where they'd appear in a different place
 Also checked for username(and if not redirect to login) everywhere I try to grab username
 Also passed title to /contribute
+Updated design doc
