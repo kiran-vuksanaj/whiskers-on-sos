@@ -195,5 +195,9 @@ chanM -- 2019-10-27 01:01
 Tried to fix sqlite error with UNIQUE constraint
 ERROR (still exists): UNIQUE constraint blocks multiple story entries under same title
 
+
 sontagC -- 2019-10-27 16:26
 Added formatting for titles in contribute.html
+
+friedH -- 2019-10-27 16:25
+possibly fixed new problem with the additive functions
