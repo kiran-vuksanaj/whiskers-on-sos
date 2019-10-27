@@ -20,7 +20,7 @@ cursor = connector.cursor()
 # create table of users with a username and password tab
 cursor.execute("CREATE TABLE IF NOT EXISTS users(Username TEXT UNIQUE PRIMARY KEY, Password TEXT);")
 # create stories table with title, entries and author columns
-cursor.execute("CREATE TABLE IF NOT EXISTS stories(Title TEXT UNIQUE PRIMARY KEY, Entries TEXT, Author TEXT);")
+cursor.execute("CREATE TABLE IF NOT EXISTS stories(Title TEXT PRIMARY KEY, Entries TEXT, Author TEXT);")
 #================================================================
 
 app = Flask(__name__)
