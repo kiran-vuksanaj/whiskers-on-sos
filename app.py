@@ -79,7 +79,7 @@ def contribute():
 # Authentication page for login
 # Adds username to session
 # Flashes user nonexistent and incorrect password error messages
-@app.route("/authenticate/login", methods = ["POST"])
+@app.route("/login/authenticate", methods = ["POST"])
 def authenticateLogin():
     print(__name__)
     username = request.form["username"]
@@ -97,7 +97,7 @@ def authenticateLogin():
 # Authentication page for register
 # Adds username to session if unique
 # Flashes existing user error message
-@app.route("/authenticate/register", methods = ["POST"])
+@app.route("/register/authenticate", methods = ["POST"])
 def authenticateLogin():
     print(__name__)
     username = request.form["username"]
