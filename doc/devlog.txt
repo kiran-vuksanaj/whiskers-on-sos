@@ -147,3 +147,6 @@ added names for input fields.
 sontagC -- 2019-10-26 22:10
 Updated site map
 Wrote create/authenticate routes
+
+friedH -- 2019-10-26 22:20
+fixed more faulty db logic
