@@ -66,6 +66,8 @@ def create():
 @app.route("/browse")
 def browse():
     print(__name__)
+    if 'username' not in session:
+        return redirect("/login")
     username=session['username']
     return render_template("browse.html", user=username, stories=db.getOtherStories(cursor, username))
 
