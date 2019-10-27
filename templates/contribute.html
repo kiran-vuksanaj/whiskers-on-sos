@@ -15,14 +15,14 @@ welcome, {{user}}
 {% endfor %}
 </H3>
 
-<form action = "/contribute", method = "POST">
+<form action = "/contribute/add", method = "POST">
     Content: <br>
     <textarea rows="10" cols="50" maxlength = "300" name = "content"></textarea><br>
     Text Limit: 300 characters<br>
-    <input type = "submit" name = "sub1" value = "Submit"><br>
+    <input type = "submit" name = "text" value = "Submit"><br>
 </form>
 
-<form action ="/browse", method = "GET">
+<form action ="/browse">
     <input type = "submit" name = "sub2" value = "Cancel"><br>
 </form>
 
