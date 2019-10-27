@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+Creating a New Story
+{% endblock %}
+
+{% block content %}
+<H3>
+{% set msgs = get_flashed_messages() %}
+{% for msg in msgs %}
+	{{ msg }}
+{% endfor %}
+</H3>
+
+<form action = "/add", method = "POST">
+    Title of story:
+    <input type = "text" name = "Title"> <br>
+    Content:
+    <input type = "text" name = "Content"> <br>
+    <input type = "submit" name = "submit" value = "Submit">
+</form>
+
+<form action = "/home", method = "GET">
+    <input type = "submit" name = "cancel" value = "Cancel">
+</form>
+
+  {% endblock %}
