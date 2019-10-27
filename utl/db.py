@@ -23,6 +23,7 @@ def addUser(curse, username, password): # add a row to the users database, with 
     curse.execute("INSERT INTO users (Username, Password) VALUES('%s', '%s');" % (username, password))
 
 def addEntry(curse, title, entry, author): # add a row to the stories database, with the given title/entry/author combo. Return nothing.
+    print("\nTitle: "+title+"\nText: "+text+"\nAuthor: "+author+"\n")#debug statement 
     curse.execute("INSERT INTO stories (Title, Entries, Author) VALUES('%s', '%s', '%s');" % (title, entry, author))
 
 def authenticate(curse, username, password): # return true if the username/password combo exists within the database, otherwise return false.
