@@ -35,7 +35,7 @@ def root():
         return redirect("/home")
     else:
         return redirect("/login")
-        
+
 #=====RENDERING BASIC PAGES======================================
 
 # Login page
@@ -43,7 +43,7 @@ def root():
 def login():
     print(__name__)
     return render_template("login.html")
-    
+
 # Home page
 @app.route("/home")
 def home():
@@ -67,7 +67,7 @@ def create():
 def browse():
     print(__name__)
     return render_template("browse.html")
-    
+
 # Contribution page
 @app.route("/contribute")
 def contribute():
@@ -93,7 +93,7 @@ def authenticateLogin():
     else:                                               #Last possible error, wrong password
         flash("incorrect password")
         return redirect("/login")
-        
+
 # Authentication page for register
 # Adds username to session if unique
 # Flashes existing user error message
@@ -109,13 +109,14 @@ def authenticateRegister():
     else:                                               #Non unique username, try again
         flash("username already exists")
         return redirect("/register")
-    
+
 
 
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(host='0.0.0.0', port='80')
+    ##app.run(host='0.0.0.0', port= 80)
+    app.run()
 
 connector.commit() # save changes
 connector.close()  # close database
