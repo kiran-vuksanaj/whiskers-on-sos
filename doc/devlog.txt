@@ -198,7 +198,7 @@ ERROR (still exists): UNIQUE constraint blocks multiple story entries under same
 
 sontagC -- 2019-10-27 16:26
 Added formatting for titles in contribute.html
-Better debug command for contribute, create inserted into db.
+Better debug command for contribute, create inserted into db.addEntry
 
 friedH -- 2019-10-27 16:25
 possibly fixed new problem with the additive functions
