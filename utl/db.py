@@ -7,7 +7,7 @@ import sqlite3 # enable control of an sqlite database
 
 def uniqueTitle(curse, title): # return a boolean for whether or not a given title matches one already in the table.
     repeats = curse.execute("SELECT Title FROM stories;")
-    for titleS in repeats:
+    for names in repeats:
         if (names[0] == title):
             return False
     return True
