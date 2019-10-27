@@ -130,4 +130,4 @@ sontagC -- 2019-10-26 20:46
 Changed naming scheme to register/authenticate etc
 
 sontagC -- 2019-10-26 20:55
-I broke code by naming two functions authenticateLogin, fixed bug.
+I broke code by naming two functions authenticateLogin, fixed bug. Added back host=0.0.0.0
