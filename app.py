@@ -75,15 +75,26 @@ def browse():
     return render_template("browse.html", user=username, stories=db.getOtherStories(cursor, username))
 
 # Contribution page
-@app.route("/contribute")
+@app.route("/contribute", methods = ["POST"])
 def contribute():
     print(__name__)
     if 'username' not in session:
         return redirect("/login")
     username=session['username']
-    return render_template("contribute.html", user=username, title = request.args["subCoby"])
+    return render_template("contribute.html", user=username, title = request.args[subCoby])
 
 #=====RENDERING LOGIC PAGES======================================
+
+@app.route("/contribute/add", methods = ["POST"])
+def contributeAdd():
+    print(__name__)
+    if 'username' not in session:
+        return redirect("/login")
+    title = request.form["title"]
+    text = request.form["text"]
+    author = session['username']
+    db.addEntry(cursor, title, text, author)
+    
 
 # Authentication page for login
 # Adds username to session
@@ -137,15 +148,6 @@ def authenticateCreate():
     else:                                               #Non unique title, try again
         flash("title not unique")
         return redirect("/create")
-'''
-# Authentication page for create
-# Addes story to DB if unique title
-# Flashes success or non unique title error
-@app.route("/contribute/authenticate", methods = ["POST"])
-def authenticateContribute():
-    print(__name__)
-    if 'username' not in sessio
-'''
 
 if __name__ == "__main__":
     app.debug = True

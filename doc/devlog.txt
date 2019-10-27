@@ -178,4 +178,5 @@ Added flashing messages to home.html to avoid bugs where they'd appear in a diff
 Also checked for username(and if not redirect to login) everywhere I try to grab username
 Also passed title to /contribute
 Updated design doc
-Creat on home -> "create"
+Creat (a new story) on home -> "create"
+List of titles has a header
