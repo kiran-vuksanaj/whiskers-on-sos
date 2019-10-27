@@ -129,4 +129,5 @@ Added authenticate/register route
 sontagC -- 2019-10-26 20:46
 Changed naming scheme to register/authenticate etc
 
-sontagC -- 2019-10-26
+sontagC -- 2019-10-26 20:55
+I broke code by naming two functions authenticateLogin, fixed bug.
