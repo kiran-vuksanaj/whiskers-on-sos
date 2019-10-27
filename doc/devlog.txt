@@ -118,3 +118,6 @@ Added information on How To Run in the README.md
 
 sontagC -- 2019-10-25 10:27
 Added host=0.0.0.0 on the run command so app viewable by IP address
+
+sontagC -- 2019-10-26 20:10
+Added lots of skeleton to app.py for rendering different pages. Also made flask app run on default port.

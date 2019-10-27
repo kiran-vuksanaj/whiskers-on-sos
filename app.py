@@ -29,42 +29,70 @@ app.secret_key = os.urandom(32) # secret key set to randomly generated string
 # Landing page
 # Checks if user is logged in and redirects to either /home or /login
 @app.route("/")
-def hello_world():
+def root():
     print(__name__)
     if 'username' in session:
         return redirect("/home")
     else:
         return redirect("/login")
+        
+#=====RENDERING BASIC PAGES======================================
 
 # Login page
 @app.route("/login")
 def login():
+    print(__name__)
     return render_template("login.html")
+    
+# Home page
+@app.route("/home")
+def home():
+    print(__name__)
+    return render_template("home.html")
+
+# Register page
+@app.route("/register")
+def register():
+    print(__name__)
+    return render_template("register.html")
+
+# Creation page
+@app.route("/create")
+def create():
+    print(__name__)
+    return render_template("create.html")
+
+# Browsing page
+@app.route("/browse")
+def browse():
+    print(__name__)
+    return render_template("browse.html")
+    
+# Contribution page
+@app.route("/contribute")
+def contribute():
+    print(__name__)
+    return render_template("contribute.html")
+
+#=====RENDERING LOGIC PAGES======================================
 
 # Authentication page for login
 # Adds username to session
 # Flashes appropriate error messages
 @app.route("/authenticate/login", methods = ["POST"])
 def authenticateLogin():
+    print(__name__)
     username = request.form["username"]
     password = request.form["password"]
-    if db.authenticate(cursor, username, password):
+    if db.authenticate(cursor, username, password):     #Successful login goes /home
         session['username'] = username
         return redirect("/home")
-    elif db.uniqueUsername(cursor, username):
+    elif db.uniqueUsername(cursor, username):           #Unique username means they need to register
         flash("username does not exist")
         return redirect("/login")
-    else:
+    else:                                               #Last possible error, wrong password
         flash("incorrect password")
         return redirect("/login")
-    '''
-    flash("Error: something went wrong") # TEMP flash message placeholder
-    return redirect("/login")'''
-
-# Home page
-@app.route("/home")
-def homePage():
-    return render_template("home.html")
 
 
 
