@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-Creating a New Story
+<h1>Creating a New Story<h1>
 {% endblock %}
 
 {% block content %}
@@ -13,10 +13,10 @@ Creating a New Story
 </H3>
 
 <form action = "/add", method = "POST">
-    Title of story:
-    <input type = "text" name = "Title"> <br>
-    Content:
-    <input type = "text" name = "Content"> <br>
+    Title of story: <br>
+    <textarea rows="1" cols="50"></textarea> <br>
+    Content: <br>
+    <textarea rows="20" cols="50"></textarea><br>
     <input type = "submit" name = "submit" value = "Submit">
 </form>
 
