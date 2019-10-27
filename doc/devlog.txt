@@ -169,11 +169,11 @@ Fixed how stories are linked from browse. Fixed lots of naming bugs, and added a
 friedH -- 2019-10-26 23:39
 fixed string formatting errors again
 
-<<<<<<< HEAD
+
 friedH -- 2019-10-26 23:43
 fix typo
-=======
+
 sontagC -- 2019-10-26 23:43
 Added flashing messages to home.html to avoid bugs where they'd appear in a different place
 Also checked for username(and if not redirect to login) everywhere I try to grab username
->>>>>>> 94d8a720b300f51a5f412b2fab4ae19f8cf521a5
+Also passed title to /contribute
