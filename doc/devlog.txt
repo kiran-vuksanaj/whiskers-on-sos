@@ -202,3 +202,7 @@ Better debug command for contribute, create inserted into db.addEntry
 
 friedH -- 2019-10-27 16:25
 possibly fixed new problem with the additive functions
+
+sontagC -- 2019-10-27 16:52
+Got rid of Titles being primary key (caused bug in new implementation
+Reinitialized db tables each time

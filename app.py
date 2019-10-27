@@ -17,10 +17,14 @@ import utl.db as db
 #=====SQLITE3 INITIALIZING CODE==================================
 connector = sqlite3.connect("smallpox.db", check_same_thread=False)
 cursor = connector.cursor()
-# create table of users with a username and password tab
+#drop old tables
+cursor.execute("DROP TABLE IF EXISTS `users`;")
+cursor.execute("DROP TABLE IF EXISTS `stories`;")
+# create table of users with a username and password table
 cursor.execute("CREATE TABLE IF NOT EXISTS users(Username TEXT UNIQUE PRIMARY KEY, Password TEXT);")
 # create stories table with title, entries and author columns
-cursor.execute("CREATE TABLE IF NOT EXISTS stories(Title TEXT PRIMARY KEY, Entries TEXT, Author TEXT);")
+cursor.execute("CREATE TABLE IF NOT EXISTS stories(Title TEXT, Entries TEXT, Author TEXT);")
+db.addUser(cursor, "test", "123")
 #================================================================
 
 app = Flask(__name__)
