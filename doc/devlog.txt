@@ -136,6 +136,14 @@ sontagC -- 2019-10-26 21:18
 Added back host=0.0.0.0
 To visit the flask app, find your local ip, then go to <ip>:5000 in a browser
 
+wuJ -- 2019-10-26 21:31
+I tampered with the app.run() but it was fixed by Coby.
+added and updated all Html pages with updated form actions.
+
+wuJ -- 2019-10-26 22:00 
+I added the remaining html file templates.
+added names for input fields.
+
 sontagC -- 2019-10-26 22:10
 Updated site map
-Wrote create/authenticate route
+Wrote create/authenticate routes

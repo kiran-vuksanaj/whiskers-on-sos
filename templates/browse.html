@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+Smallpox Stories
+{% endblock %}
+
+{% block content %}
+welcome, {{user}}
+
+<H3>
+{% set msgs = get_flashed_messages() %}
+{% for msg in msgs %}
+	{{ msg }}
+{% endfor %}
+</H3>
+
+<form action = "/home", method = "GET">
+		<input type = "submit" name = "sub1" value = "Home">
+</form>
+
+<form action = "/login", method = "GET">
+		<input type = "submit" name = "sub2" value = "Logout">
+</form>
+
+{% for titles in Stories %}
+    <li>
+      <a href="{{titles}}"></a>
+    <li>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block header %}
+  {% block title %}
+    <title> {{title}} </title>
+  {% endblock %}
+{% endblock %}
+
+{% block content %}
+welcome, {{user}}
+
+<H3>
+{% set msgs = get_flashed_messages() %}
+{% for msg in msgs %}
+	{{ msg }}
+{% endfor %}
+</H3>
+
+<form action = "/contribute", method = "POST">
+    Content: <br>
+    <textarea rows="10" cols="50" maxlength = "300" name = "content"></textarea><br>
+    Text Limit: 300 characters<br>
+    <input type = "submit" name = "sub1" value = "Submit"><br>
+</form>
+
+<form action ="/browse", method = "GET">
+    <input type = "submit" name = "sub2" value = "Cancel"><br>
+</form>
+
+{% endblock %}

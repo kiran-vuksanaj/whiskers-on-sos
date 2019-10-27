@@ -12,12 +12,12 @@ Creating a New Story
 {% endfor %}
 </H3>
 
-<form action = "/add", method = "POST">
+<form action = "/contribute", method = "POST">
     Title of story: <br>
-    <textarea rows="1" cols="50"></textarea> <br>
+    <textarea rows="1" cols="50" name="StoryTitle"></textarea> <br>
     Content: <br>
-    <textarea rows="20" cols="50"></textarea><br>
-    <input type = "submit" name = "submit" value = "Submit">
+    <textarea rows="20" cols="50" name ="Content"></textarea><br>
+    <input type = "submit" name = "sub" value = "Submit">
 </form>
 
 <form action = "/home", method = "GET">
