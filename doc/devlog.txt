@@ -156,3 +156,6 @@ Fixed form action in create to go to create/authenticate
 
 chanM -- 2019-10-26 22:34
 Fixed sqlite error with registering stemming from errors within database functions
+
+friedH -- 2019-10-26 22:51
+fix naming discrepancy in library
