@@ -7,6 +7,13 @@ Smallpox Stories
 {% block content %}
 welcome, {{user}}
 
+<H3>
+{% set msgs = get_flashed_messages() %}
+{% for msg in msgs %}
+	{{ msg }}
+{% endfor %}
+</H3>
+
 <form action = "/home", method = "GET">
 		<input type = "submit" name = "sub1" value = "Home">
 </form>
