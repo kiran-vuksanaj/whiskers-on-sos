@@ -93,7 +93,7 @@ def contributeAdd():
     title = request.form["title"]
     text = request.form["text"]
     author = session['username']
-    db.addEntry(cursor, title, text, author)
+    print(db.addEntry(cursor, title, text, author))
     return redirect("/browse")
     
 
