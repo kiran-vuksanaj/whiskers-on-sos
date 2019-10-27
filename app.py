@@ -110,7 +110,24 @@ def authenticateRegister():
         flash("username already exists")
         return redirect("/register")
 
-
+# Authentication page for create
+# Addes story to DB if unique title
+# Flashes success or non unique title error
+@app.route("/create/authenticate", methods = ["POST"])
+def authenticateCreate():
+    print(__name__)
+    if !'username' in session:
+        return redirect("/login")
+    title = request.form["title"]
+    text = request.form["text"]
+    author = session['username']
+    if db.uniqueTitle(cursor, title):                   #Unique title, make entry
+        db.addEntry(cursor, title, text, author)
+        flash("Story created")
+        return redirect("/home")
+    else:                                               #Non unique title, try again
+        flash("title not unique")
+        return redirect("/create")
 
 
 if __name__ == "__main__":

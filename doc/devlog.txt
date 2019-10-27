@@ -134,3 +134,8 @@ I broke code by naming two functions authenticateLogin, fixed bug.
 
 sontagC -- 2019-10-26 21:18
 Added back host=0.0.0.0
+To visit the flask app, find your local ip, then go to <ip>:5000 in a browser
+
+sontagC -- 2019-10-26 22:10
+Updated site map
+Wrote create/authenticate route
