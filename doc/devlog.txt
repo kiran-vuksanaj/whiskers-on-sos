@@ -168,3 +168,6 @@ Fixed how stories are linked from browse. Fixed lots of naming bugs, and added a
 
 friedH -- 2019-10-26 23:39
 fixed string formatting errors again
+
+friedH -- 2019-10-26 23:43
+fix typo

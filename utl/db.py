@@ -44,14 +44,14 @@ def getFullStory(curse, title): # return a list of every entry associated with a
 
 def getContributedStories(curse, username): # return a set of the titles of every story contributed to by an author
     contributedStories = []
-    cursorObject = curse.execute("SELECT Titles FROM stories WHERE Author = '%s';" % username)
+    cursorObject = curse.execute("SELECT Title FROM stories WHERE Author = '%s';" % username)
     for titleTuple in cursorObject:
         contributedStories.append(titleTuple[0])
     return set(contributedStories)
 
 def getOtherStories(curse, username): # return a set of the titles of every NOT story contributed to by an author
     notContributedStories = []
-    cursorObject = curse.execute("SELECT Titles FROM stories WHERE Author != '%s';" % username)
+    cursorObject = curse.execute("SELECT Title FROM stories WHERE Author != '%s';" % username)
     for titlesTuple in cursorObject:
         notContributedStories.append(titlesTuple[0])
     return set(notContributedStories)
