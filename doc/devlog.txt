@@ -190,3 +190,7 @@ Changed contribute method to GET
 
 chanM -- 2019-10-27 00:51
 Fixed display of title concerning use of Jinja Blocks
+
+chanM -- 2019-10-27 01:01
+Tried to fix sqlite error with UNIQUE constraint
+ERROR (still exists): UNIQUE constraint blocks multiple story entries under same title
