@@ -78,7 +78,7 @@ def contribute():
 
 # Authentication page for login
 # Adds username to session
-# Flashes appropriate error messages
+# Flashes user nonexistent and incorrect password error messages
 @app.route("/authenticate/login", methods = ["POST"])
 def authenticateLogin():
     print(__name__)
@@ -93,6 +93,23 @@ def authenticateLogin():
     else:                                               #Last possible error, wrong password
         flash("incorrect password")
         return redirect("/login")
+        
+# Authentication page for register
+# Adds username to session if unique
+# Flashes existing user error message
+@app.route("/authenticate/register", methods = ["POST"])
+def authenticateLogin():
+    print(__name__)
+    username = request.form["username"]
+    password = request.form["password"]
+    if db.uniqueUsername(cursor, username):             #If new user, make their account and go home
+        db.addUser(cursor, username, password)
+        session['username'] = username
+        return redirect("/home")
+    else:                                               #Non unique username, try again
+        flash("username already exists")
+        return redirect("/register")
+    
 
 
 

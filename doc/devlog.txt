@@ -122,3 +122,6 @@ Added host=0.0.0.0 on the run command so app viewable by IP address
 sontagC -- 2019-10-26 20:10
 Added all the rendering routes (login, register, etc) to the app
 Also made flask app run on default port (only applies for accessing through IP instead of localhost, I don't need to do IP:port anymore just IP)
+
+sontagC -- 2019-10-26 20:29
+Added authenticate/register route
