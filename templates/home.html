@@ -6,6 +6,12 @@ Smallpox Stories
 
 {% block content %}
 WELCOME {{user}} !!!
+
+{% set msgs = get_flashed_messages() %}
+{% for msg in msgs %}
+	{{ msg }}
+{% endfor %}
+
 <form action="/login", method = "GET">
 	<input type="submit" name="sub1" value="Logout" > <br>
 </form>
