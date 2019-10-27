@@ -25,7 +25,6 @@ def addUser(curse, username, password): # add a row to the users database, with 
 def addEntry(curse, title, entry, author): # add a row to the stories database, with the given title/entry/author combo. Return nothing.
     curse.execute("INSERT INTO stories VALUES('%s', '%s', '%s');" % (title, entry, author))
 
-#=====TEMPORARILY Returning simple Booleans=====
 def authenticate(curse, username, password): # return true if the username/password combo exists within the database, otherwise return false.
     givenUser = (username, password)
     cursorObject = curse.execute("SELECT Password FROM users WHERE Username = '%s';" % username)
@@ -47,7 +46,7 @@ def getContributedStories(curse, username): # return a set of the titles of ever
     cursorObject = curse.execute("SELECT Title FROM stories WHERE Author = '%s';" % username)
     for titleTuple in cursorObject:
         contributedStories.append(titleTuple[0])
-    return set(contributedStories)
+    return contributedStories
 
 def getOtherStories(curse, username): # return a set of the titles of every NOT story contributed to by an author
     notContributedStories = []
