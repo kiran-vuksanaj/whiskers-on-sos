@@ -162,3 +162,6 @@ fix naming discrepancy in library
 
 sontagC -- 2019-10-26 22:54
 Added user variable when rendering templates so site can say welcome <user>
+
+sontagC -- 2019-10-26 23:18
+Fixed how stories are linked from browse

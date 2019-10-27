@@ -66,7 +66,8 @@ def create():
 @app.route("/browse")
 def browse():
     print(__name__)
-    return render_template("browse.html", user=session['username'])
+    username=session['username']
+    return render_template("browse.html", user=username, Stories=db.getOtherStories(cursor, username)
 
 # Contribution page
 @app.route("/contribute")

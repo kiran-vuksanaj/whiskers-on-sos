@@ -22,9 +22,10 @@ welcome, {{user}}
 		<input type = "submit" name = "sub2" value = "Logout">
 </form>
 
-{% for titles in Stories %}
-    <li>
-      <a href="{{titles}}"></a>
-    <li>
-{% endfor %}
+	<form action = "/contribute", method = "GET">
+	{% for titles in Stories %}
+      	<input type = "submit" name=subCoby value = titles>
+    {% endfor %}
+    </form>
+
 {% endblock %}
