@@ -134,3 +134,7 @@ I broke code by naming two functions authenticateLogin, fixed bug.
 
 sontagC -- 2019-10-26 21:18
 Added back host=0.0.0.0
+
+wuJ -- 2019-10-26 21:31
+I tampered with the app.run() but it was fixed by Coby.
+added and updated all Html pages with updated form actions.
