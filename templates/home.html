@@ -5,8 +5,8 @@ Smallpox Stories
 {% endblock %}
 
 {% block content %}
-WELCOME {{user}}
-<form action="/logout", method = "GET">
+WELCOME {{user}} !!!
+<form action="/login", method = "GET">
 	<input type="submit" name="sub1" value="Logout" > <br>
 </form>
 
@@ -14,7 +14,7 @@ WELCOME {{user}}
 	<input type="submit" name="sub2" value="Creat a New Story" > <br>
 </form>
 
-<form action="/Browse", method = "GET">
+<form action="/browse", method = "GET">
 	<input type="submit" name="sub3" value="Browse Stories" > <br>
 </form>
 

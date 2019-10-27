@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Smallpox Stories
+{% endblock %}
+
+{% block content %}
+welcome, {{user}}
+
+<form action = "/home", method = "GET">
+		<input type = "submit" name = "sub1" value = "Home">
+</form>
+
+<form action = "/login", method = "GET">
+		<input type = "submit" name = "sub1" value = "Logout">
+</form>
+
+{% for titles in Stories %}
+    <li>
+      <a href="{{titles}}"></a>
+    <li>
+{% endfor %}
+{% endblock %}
