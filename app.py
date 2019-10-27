@@ -75,7 +75,7 @@ def browse():
     return render_template("browse.html", user=username, stories=db.getOtherStories(cursor, username))
 
 # Contribution page
-@app.route("/contribute", methods = ["POST"])
+@app.route("/contribute", methods = ["GET"])
 def contribute():
     print(__name__)
     if 'username' not in session:
@@ -94,6 +94,7 @@ def contributeAdd():
     text = request.form["text"]
     author = session['username']
     db.addEntry(cursor, title, text, author)
+    return redirect("/browse")
     
 
 # Authentication page for login
