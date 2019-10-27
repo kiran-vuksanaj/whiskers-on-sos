@@ -116,7 +116,7 @@ def authenticateRegister():
 @app.route("/create/authenticate", methods = ["POST"])
 def authenticateCreate():
     print(__name__)
-    if !'username' in session:
+    if 'username' not in session:
         return redirect("/login")
     title = request.form["title"]
     text = request.form["text"]
