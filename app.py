@@ -98,6 +98,7 @@ def contributeAdd():
     text = request.form["text"]
     author = session['username']
     db.addEntry(cursor, title, text, author)
+    connector.commit()
     return redirect("/browse")
     
 
@@ -129,6 +130,7 @@ def authenticateRegister():
     password = request.form["password"]
     if db.uniqueUsername(cursor, username):             #If new user, make their account and go home
         db.addUser(cursor, username, password)
+        connector.commit()
         session['username'] = username
         return redirect("/home")
     else:                                               #Non unique username, try again
@@ -148,6 +150,7 @@ def authenticateCreate():
     author = session['username']
     if db.uniqueTitle(cursor, title):                   #Unique title, make entry
         db.addEntry(cursor, title, text, author)
+        connector.commit()
         flash("Story created")
         return redirect("/home")
     else:                                               #Non unique title, try again
