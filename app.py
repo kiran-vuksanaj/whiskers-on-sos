@@ -140,7 +140,14 @@ def authenticateRegister():
     print(__name__)
     username = request.form["username"]
     password = request.form["password"]
-    if db.uniqueUsername(cursor, username):             #If new user, make their account and go home
+    print("'%s', '%s'" % (username,password))
+    if (len(username) == 0):                            #If username is empty, flash error
+        flash("cannot have empty username")
+        return redirect("/register")
+    elif (len(password) == 0):                          #If password is empty, flash error
+        flash("cannot have empty password")
+        return redirect("/register")
+    elif db.uniqueUsername(cursor, username):           #If new user, make their account and go home
         db.addUser(cursor, username, password)
         connector.commit()
         session['username'] = username
