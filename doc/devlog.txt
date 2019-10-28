@@ -221,3 +221,7 @@ Added debugging for contribute page
 
 friedH -- 2019-10-27 20:33
 fix typo in app.py
+
+wuJ -- 2019-10-26 20:59
+fixed buttons not printing full titles.
+added loop to print out stories on home page.
