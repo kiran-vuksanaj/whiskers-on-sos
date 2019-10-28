@@ -42,6 +42,13 @@ def getFullStory(curse, title): # return a list of every entry associated with a
         textEntries.append(storyTuple[0])
     return textEntries
 
+def lastEntry(curse, title):
+    mostRecentEntry = ""
+    cursorObject = curse.execute("SELECT Entries FROM stories WHERE Title = '%s';" % title)
+    for storyTuple in cursorObject:
+        mostRecentEntry = storyTuple[0]
+    return mostRecentEntry
+
 def getContributedStories(curse, username): # return a set of the titles of every story contributed to by an author
     contributedStories = []
     cursorObject = curse.execute("SELECT Title FROM stories WHERE Author = '%s';" % username)
@@ -56,4 +63,4 @@ def getOtherStories(curse, username): # return a set of the titles of every NOT 
     for titlesTuple in cursorObject:
         if (titlesTuple not in notContributedStories):
             notContributedStories.append(titlesTuple[0])
-    return set(notContributedStories)
+    return notContributedStories
