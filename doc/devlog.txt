@@ -234,3 +234,7 @@ added troubleshooting prints in db.py
 
 friedH -- 2019-10-27 21:47
 fixed indexing error in db.py
+
+wuJ -- 2019-10-27 21:49
+added helper function getTitlesAndStories() in bd.py
+also added a variable in app.py to pass that list into the Html.
