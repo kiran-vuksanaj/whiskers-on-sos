@@ -17,14 +17,10 @@ import utl.db as db
 #=====SQLITE3 INITIALIZING CODE==================================
 connector = sqlite3.connect("smallpox.db", check_same_thread=False)
 cursor = connector.cursor()
-'''#drop old tables
-cursor.execute("DROP TABLE IF EXISTS `users`;")
-cursor.execute("DROP TABLE IF EXISTS `stories`;")'''
 # create table of users with a username and password table
 cursor.execute("CREATE TABLE IF NOT EXISTS users(Username TEXT UNIQUE PRIMARY KEY, Password TEXT);")
 # create stories table with title, entries and author columns
 cursor.execute("CREATE TABLE IF NOT EXISTS stories(Title TEXT, Entries TEXT, Author TEXT);")
-'''db.addUser(cursor, "test", "123")'''
 #================================================================
 
 app = Flask(__name__)
@@ -39,6 +35,7 @@ def root():
         return redirect("/home")
     else:
         return redirect("/login")
+
 
 #=====RENDERING BASIC PAGES======================================
 
@@ -55,7 +52,13 @@ def home():
     if 'username' not in session:
         return redirect("/login")
     username=session['username']
-    return render_template("home.html", user=username, stories = db.getTitlesAndStories(cursor, username))
+    storiesDict = db.getTitlesAndStories(cursor, username)
+    for title, storyList in storiesDict.items():
+        storyString = ""
+        for entry in storyList:
+            storyString += entry
+        storiesDict[title] = storyString
+    return render_template("home.html", user=username, stories = storiesDict)
 
 # Register page
 @app.route("/register")
@@ -94,8 +97,10 @@ def contribute():
     print("\n"+storyTitle+" rendering now\nLast Entry:\n"+lastEntry+"\n")
     return render_template("contribute.html", user=username, title = storyTitle, latest=lastEntry)
 
-#=====RENDERING LOGIC PAGES======================================
 
+#=====AUTHENTICATION/LOGIC PAGES=================================
+
+# Adds contributions made to stories
 @app.route("/contribute/add", methods = ["POST"])
 def contributeAdd():
     print(__name__)
@@ -158,15 +163,15 @@ def authenticateCreate():
     if db.uniqueTitle(cursor, title):                   #Unique title, make entry
         db.addEntry(cursor, title, text, author)
         connector.commit()
-        flash("Story created")
+        flash("Story Successfully Created")
         return redirect("/home")
     else:                                               #Non unique title, try again
-        flash("title not unique")
+        flash("title is not unique")
         return redirect("/create")
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(host='0.0.0.0')
+    app.run()
 
 connector.commit() # save changes
 connector.close()  # close database
