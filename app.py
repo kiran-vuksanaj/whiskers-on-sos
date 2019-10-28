@@ -86,6 +86,7 @@ def contribute():
         return redirect("/login")
     username=session['username']
     storyTitle = request.args["subCoby"]
+    print("\n"+storyTitle+"\n")
     lastEntry = db.lastEntry(storyTitle)
     print("\n"+storyTitle+" rendering now\nLast Entry:\n"+lastEntry+"\n")
     return render_template("contribute.html", user=username, title = storyTitle, latest=lastEntry)

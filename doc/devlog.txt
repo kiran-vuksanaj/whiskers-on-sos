@@ -216,5 +216,5 @@ friedH -- 2019-10-27 20:16
 added first iteration of lastEntry function
 
 sontagC -- 2019-10-27 20:17
-Pass imaginary Jinja variable "latest" to contribute.html, using imaginary method db.getLast() (They haven't been coded yet)
+Pass imaginary Jinja variable "latest" to contribute.html, using imaginary method db.lastEntry() (They haven't been coded yet)
 Added debugging for contribute page
