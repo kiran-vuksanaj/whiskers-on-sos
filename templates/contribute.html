@@ -16,6 +16,11 @@ welcome, {{user}}
 {% endfor %}
 </H3>
 
+Latest update:
+{{latest}}
+
+
+
 <form action = "/contribute/add", method = "POST">
     Content: <br>
     <input type="hidden" name="title" value={{title}}>
