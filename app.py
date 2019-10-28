@@ -85,7 +85,10 @@ def contribute():
     if 'username' not in session:
         return redirect("/login")
     username=session['username']
-    return render_template("contribute.html", user=username, title = request.args["subCoby"])
+    storyTitle = request.args["subCoby"]
+    lastEntry = db.lastEntry(storyTitle)
+    print("\n"+storyTitle+" rendering now\nLast Entry:\n"+lastEntry+"\n")
+    return render_template("contribute.html", user=username, title = storyTitle, latest=lastEntry)
 
 #=====RENDERING LOGIC PAGES======================================
 
