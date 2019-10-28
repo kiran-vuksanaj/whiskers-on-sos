@@ -281,3 +281,7 @@ fixed comments in db.py
 chanM -- 2019-10-28 09:53
 Fixed sanitization of inputs into sqlite databases using tuples
 Now allows ' and " in stories
+
+chanM -- 2019-10-28 10:16
+Made error when trying to submit an empty story title
+Fixed small spacing between flashed messages on home page
