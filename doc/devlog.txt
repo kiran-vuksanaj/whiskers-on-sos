@@ -264,3 +264,10 @@ Added accounts and stories to showcase functionality: (username, password)
  - Matthew, 123
  - Coby, 123
  - Jionghao, 123
+
+chanM -- 2019-10-27 24:53
+Design doc changes:
+ - removed UNIQUE identifier from stories table, Title column
+ - removed unused flash messages
+ - updated Component/Page Description to match current layout and procedures
+   - specified buttons for browsing and GET method used for corresponding /contribute page
