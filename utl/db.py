@@ -55,6 +55,7 @@ def getContributedStories(curse, username): # return a set of the titles of ever
     for titleTuple in cursorObject:
         if (titleTuple[0] not in contributedStories):
             contributedStories.append(titleTuple[0])
+        print(contributedStories)
     return contributedStories
 
 def getOtherStories(curse, username): # return a set of the titles of every NOT story contributed to by an author
@@ -63,4 +64,5 @@ def getOtherStories(curse, username): # return a set of the titles of every NOT 
     for titlesTuple in cursorObject:
         if (titlesTuple not in notContributedStories):
             notContributedStories.append(titlesTuple[0])
+        print(notContributedStories)
     return notContributedStories
