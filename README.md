@@ -4,7 +4,7 @@
 ### Roster:
 - Coby Sontag: Backend
 - Hannah Fried: Database
-- Matthew Chan: Project Manager, Full Stack Management
+- Matthew Chan: Project Manager, Backend Assistant
 - Jionghao Wu: Frontend
 
 <br>
