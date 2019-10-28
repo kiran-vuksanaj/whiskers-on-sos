@@ -5,7 +5,7 @@ Smallpox Stories
 {% endblock %}
 
 {% block content %}
-WELCOME {{user}} !!!
+Welcome, {{user}}
 
 {% set msgs = get_flashed_messages() %}
 {% for msg in msgs %}
@@ -23,5 +23,17 @@ WELCOME {{user}} !!!
 <form action="/browse", method = "GET">
 	<input type="submit" name="sub3" value="Browse Stories" > <br>
 </form>
+
+Stories You've contributed to : <br>
+
+{% for entry in stories %}
+<li>
+	{{entry}}<br>
+</li>
+{% endfor %}
+
+
+
+
 
 {% endblock %}
