@@ -208,3 +208,6 @@ Got rid of Titles being primary key (caused bug in new implementation
 FAKE NEW (I didn't yet): Reinitialized db tables each time
 Added default entry by user test
 Added connector.commit() when adding data
+
+friedH -- 2019-10-27 20:07
+remove returning sets for returning lists instead
