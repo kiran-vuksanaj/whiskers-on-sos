@@ -55,7 +55,7 @@ def home():
     if 'username' not in session:
         return redirect("/login")
     username=session['username']
-    return render_template("home.html", user=username)
+    return render_template("home.html", user=username, stories = db.getTitlesAndStories(cursor, username))
 
 # Register page
 @app.route("/register")

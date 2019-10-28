@@ -66,3 +66,11 @@ def getOtherStories(curse, username): # return a set of the titles of every NOT 
             notContributedStories.append(titlesTuple[0])
         print(notContributedStories)
     return notContributedStories
+
+def getTitlesAndStories(curse, username):
+    TitlesAndStories = []
+    storytitles = getContributedStories(curse, username)
+    for titles in storytitles:
+        TitlesAndStories.append(titles)
+        TitlesAndStories.append(getFullStory(curse,titles))
+    return TitlesAndStories
