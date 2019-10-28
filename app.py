@@ -76,7 +76,9 @@ def browse():
     if 'username' not in session:
         return redirect("/login")
     username=session['username']
-    print("\nUsername being fed to getOtherStories: "+username+"\ngetOtherStories(cursor,username): "+db.getOtherStories(cursor, username)[0]+"\n")
+    print("\nUsername being fed to getOtherStories: "+username+"\n")
+    for title in db.getOtherStories(cursor, username):
+        print(title+"\n")
     return render_template("browse.html", user=username, stories=db.getOtherStories(cursor, username))
 
 # Contribution page
