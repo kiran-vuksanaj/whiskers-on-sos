@@ -241,3 +241,6 @@ also added a variable in app.py to pass that list into the Html.
 
 friedH -- 2019-10-27 22:45
 adding matthew's suggested change for getotherstories function
+
+friedH -- 2019-10-27 22:50
+Hell yeah Matt's suggestion worked!
