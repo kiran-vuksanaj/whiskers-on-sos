@@ -20,15 +20,15 @@ def uniqueUsername(curse, username): # return a boolean for whether or not a giv
     return True
 
 def addUser(curse, username, password): # add a row to the users database, with the given username/passwrd combo. Return nothing.
-    curse.execute("INSERT INTO users (Username, Password) VALUES('%s', '%s');" % (username, password))
+    curse.execute("INSERT INTO users (Username, Password) VALUES(?, ?);", (username, password))
 
 def addEntry(curse, title, entry, author): # add a row to the stories database, with the given title/entry/author combo. Return nothing.
     print("\nTitle: "+title+"\nText: "+entry+"\nAuthor: "+author+"\n")#debug statement
-    curse.execute("INSERT INTO stories (Title, Entries, Author) VALUES('%s', '%s', '%s');" % (title, entry, author))
+    curse.execute("INSERT INTO stories (Title, Entries, Author) VALUES(?, ?, ?);", (title, entry, author))
 
 def authenticate(curse, username, password): # return true if the username/password combo exists within the database, otherwise return false.
-    givenUser = (username, password)
-    cursorObject = curse.execute("SELECT Password FROM users WHERE Username = '%s';" % username)
+    #givenUser = (username, password)
+    cursorObject = curse.execute("SELECT Password FROM users WHERE Username = ?;", (username,))
     for passwordTuple in cursorObject:
         if (passwordTuple[0] != password):
             return False
@@ -37,21 +37,21 @@ def authenticate(curse, username, password): # return true if the username/passw
 
 def getFullStory(curse, title): # return a list of every entry associated with a story within a list for the story
     textEntries = []
-    cursorObject = curse.execute("SELECT Entries FROM stories WHERE Title = '%s';" % title)
+    cursorObject = curse.execute("SELECT Entries FROM stories WHERE Title = ?;", (title,))
     for storyTuple in cursorObject:
         textEntries.append(storyTuple[0])
     return textEntries
 
 def lastEntry(curse, title):#return the most recent entry in a given story identified by the title
     mostRecentEntry = ""
-    cursorObject = curse.execute("SELECT Entries FROM stories WHERE Title = '%s';" % title)
+    cursorObject = curse.execute("SELECT Entries FROM stories WHERE Title = ?;", (title,))
     for storyTuple in cursorObject:
         mostRecentEntry = storyTuple[0]
     return mostRecentEntry
 
 def getContributedStories(curse, username): # return a list of the titles of every story contributed to by an author
     contributedStories = []
-    cursorObject = curse.execute("SELECT Title FROM stories WHERE Author = '%s';" % username)
+    cursorObject = curse.execute("SELECT Title FROM stories WHERE Author = ?;", (username,))
     for titleTuple in cursorObject:
         if (titleTuple[0] not in contributedStories):
             contributedStories.append(titleTuple[0])
@@ -60,9 +60,9 @@ def getContributedStories(curse, username): # return a list of the titles of eve
 
 def getOtherStories(curse, username): # return a list of the titles of every NOT story contributed to by an author
     notContributedStories = []
-    executionStr = ("SELECT Title FROM stories WHERE Author != '%s'" % username)
+    executionStr = ("SELECT Title FROM stories WHERE Author != ?", (username,))
     for contrTitle in getContributedStories(curse, username):
-        executionStr += ("AND Title != '%s'" % contrTitle)
+        executionStr += ("AND Title != ?", (contrTitle,))
     cursorObject = curse.execute(executionStr)
     for titlesTuple in cursorObject:
         if (titlesTuple[0] not in notContributedStories):
