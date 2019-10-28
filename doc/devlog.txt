@@ -244,3 +244,15 @@ adding matthew's suggested change for getotherstories function
 
 friedH -- 2019-10-27 22:50
 Hell yeah Matt's suggestion worked!
+
+chanM -- 2019-10-27 24:13
+Removed alternate hosting from <ip>:5000
+Fixed tabbing issues
+Updated comments and deleted unecessary ones
+Added visible site name, team, and roster
+Changed footers of pages
+Added pageTitle block to display each page's title
+Changed Home Page story viewing:
+ - Changed getTitlesAndStories function in db.py to return a dictionary of titles to stories
+ - Changed home function in app.py to format and make dictionary data presentable
+Centered page elements for aesthetics
