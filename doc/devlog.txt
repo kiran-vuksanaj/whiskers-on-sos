@@ -221,3 +221,5 @@ Added debugging for contribute page
 
 friedH -- 2019-10-27 20:33
 fix typo in app.py
+
+sontagC -- 2019-10-27 20
