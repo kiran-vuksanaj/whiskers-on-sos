@@ -60,11 +60,14 @@ def getContributedStories(curse, username): # return a set of the titles of ever
 
 def getOtherStories(curse, username): # return a set of the titles of every NOT story contributed to by an author
     notContributedStories = []
-    cursorObject = curse.execute("SELECT Title FROM stories WHERE Author != '%s';" % username)
+    #cursorObject = curse.execute("SELECT Title FROM stories WHERE Author != '%s';" % username)
+    executionStr = ("SELECT Title FROM stories WHERE Author != '%s'" % username)
+    for contrTitle in getContributedStories(username):
+        executionStr += ("AND Title != '%s'" % contrTitle)
+    cursor.execute(executionStr)
     for titlesTuple in cursorObject:
         if (titlesTuple[0] not in notContributedStories):
             notContributedStories.append(titlesTuple[0])
-        print(notContributedStories)
     return notContributedStories
 
 def getTitlesAndStories(curse, username):
