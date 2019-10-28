@@ -27,7 +27,7 @@ welcome, {{user}}
 Stories:
 <form action = "/contribute", method = "GET">
 	{% for titles in stories %}
-    <input type = "submit" name="subCoby" value = {{ titles }}>
+    <input type = "submit" name="subCoby" value = "{{titles}}">
     {% endfor %}
 </form>
 
