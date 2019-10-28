@@ -231,3 +231,6 @@ Fixed bug by adding quotes around {{title}} in contribute.html
 
 friedH -- 2019-10-27 21:28
 added troubleshooting prints in db.py
+
+friedH -- 2019-10-27 21:47
+fixed indexing error in db.py
