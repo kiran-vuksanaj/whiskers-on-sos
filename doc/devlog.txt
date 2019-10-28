@@ -271,3 +271,6 @@ Design doc changes:
  - removed unused flash messages
  - updated Component/Page Description to match current layout and procedures
    - specified buttons for browsing and GET method used for corresponding /contribute page
+
+chanM -- 2019-10-27 24:55
+Corrected error in roles in README.md
