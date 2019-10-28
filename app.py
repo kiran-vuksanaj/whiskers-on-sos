@@ -76,6 +76,7 @@ def browse():
     if 'username' not in session:
         return redirect("/login")
     username=session['username']
+    print(+"\nUsername being fed to getOtherStories:"+username+"\ngetOtherStories(cursor,username):"+db.getOtherStories(cursor, username)+"\n")
     return render_template("browse.html", user=username, stories=db.getOtherStories(cursor, username))
 
 # Contribution page
@@ -87,7 +88,7 @@ def contribute():
     username=session['username']
     storyTitle = request.args["subCoby"]
     print("\n"+storyTitle+"\n")
-    lastEntry = db.lastEntry(storyTitle)
+    lastEntry = db.lastEntry(cursor, storyTitle)
     print("\n"+storyTitle+" rendering now\nLast Entry:\n"+lastEntry+"\n")
     return render_template("contribute.html", user=username, title = storyTitle, latest=lastEntry)
 
