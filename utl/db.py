@@ -49,7 +49,7 @@ def lastEntry(curse, title):
         mostRecentEntry = storyTuple[0]
     return mostRecentEntry
 
-def getContributedStories(curse, username): # return a set of the titles of every story contributed to by an author
+def getContributedStories(curse, username): # return a list of the titles of every story contributed to by an author
     contributedStories = []
     cursorObject = curse.execute("SELECT Title FROM stories WHERE Author = '%s';" % username)
     for titleTuple in cursorObject:
@@ -58,7 +58,7 @@ def getContributedStories(curse, username): # return a set of the titles of ever
         print(contributedStories)
     return contributedStories
 
-def getOtherStories(curse, username): # return a set of the titles of every NOT story contributed to by an author
+def getOtherStories(curse, username): # return a list of the titles of every NOT story contributed to by an author
     notContributedStories = []
     executionStr = ("SELECT Title FROM stories WHERE Author != '%s'" % username)
     for contrTitle in getContributedStories(curse, username):
