@@ -23,7 +23,7 @@ def addUser(curse, username, password): # add a row to the users database, with 
     curse.execute("INSERT INTO users (Username, Password) VALUES('%s', '%s');" % (username, password))
 
 def addEntry(curse, title, entry, author): # add a row to the stories database, with the given title/entry/author combo. Return nothing.
-    print("\nTitle: "+title+"\nText: "+entry+"\nAuthor: "+author+"\n")#debug statement 
+    print("\nTitle: "+title+"\nText: "+entry+"\nAuthor: "+author+"\n")#debug statement
     curse.execute("INSERT INTO stories (Title, Entries, Author) VALUES('%s', '%s', '%s');" % (title, entry, author))
 
 def authenticate(curse, username, password): # return true if the username/password combo exists within the database, otherwise return false.
@@ -46,12 +46,14 @@ def getContributedStories(curse, username): # return a set of the titles of ever
     contributedStories = []
     cursorObject = curse.execute("SELECT Title FROM stories WHERE Author = '%s';" % username)
     for titleTuple in cursorObject:
-        contributedStories.append(titleTuple[0])
+        if (titleTuple[0] not in contributedStories):
+            contributedStories.append(titleTuple[0])
     return contributedStories
 
 def getOtherStories(curse, username): # return a set of the titles of every NOT story contributed to by an author
     notContributedStories = []
     cursorObject = curse.execute("SELECT Title FROM stories WHERE Author != '%s';" % username)
     for titlesTuple in cursorObject:
-        notContributedStories.append(titlesTuple[0])
+        if (titlesTuple not in notContributedStories):
+            notContributedStories.append(titlesTuple[0])
     return set(notContributedStories)
