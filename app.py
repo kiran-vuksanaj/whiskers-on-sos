@@ -167,7 +167,10 @@ def authenticateCreate():
     title = request.form["title"]
     text = request.form["text"]
     author = session['username']
-    if db.uniqueTitle(cursor, title):                   #Unique title, make entry
+    if (len(title) == 0):                               #Title is empty, try again
+        flash("title cannot be empty")
+        return redirect("/create")
+    elif db.uniqueTitle(cursor, title):                   #Unique title, make entry
         db.addEntry(cursor, title, text, author)
         connector.commit()
         flash("Story Successfully Created")
