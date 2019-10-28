@@ -274,3 +274,6 @@ Design doc changes:
 
 chanM -- 2019-10-27 24:55
 Corrected error in roles in README.md
+
+friedH -- 2019-10-28 08:55
+fixed comments in db.py

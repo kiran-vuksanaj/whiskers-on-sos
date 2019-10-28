@@ -42,7 +42,7 @@ def getFullStory(curse, title): # return a list of every entry associated with a
         textEntries.append(storyTuple[0])
     return textEntries
 
-def lastEntry(curse, title):
+def lastEntry(curse, title):#return the most recent entry in a given story identified by the title
     mostRecentEntry = ""
     cursorObject = curse.execute("SELECT Entries FROM stories WHERE Title = '%s';" % title)
     for storyTuple in cursorObject:
@@ -69,7 +69,7 @@ def getOtherStories(curse, username): # return a list of the titles of every NOT
             notContributedStories.append(titlesTuple[0])
     return notContributedStories
 
-def getTitlesAndStories(curse, username):
+def getTitlesAndStories(curse, username): # return a dict of each story for a given username
     titlesToStories = dict()
     storytitles = getContributedStories(curse, username)
     for titles in storytitles:
