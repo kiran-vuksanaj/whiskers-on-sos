@@ -256,3 +256,11 @@ Changed Home Page story viewing:
  - Changed getTitlesAndStories function in db.py to return a dictionary of titles to stories
  - Changed home function in app.py to format and make dictionary data presentable
 Centered page elements for aesthetics
+
+chanM -- 2019-10-27 24:41
+Added checks for empty password or username when registering a new account
+Added accounts and stories to showcase functionality: (username, password)
+ - test, 123
+ - Matthew, 123
+ - Coby, 123
+ - Jionghao, 123
