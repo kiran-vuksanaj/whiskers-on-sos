@@ -277,3 +277,7 @@ Corrected error in roles in README.md
 
 friedH -- 2019-10-28 08:55
 fixed comments in db.py
+
+chanM -- 2019-10-28 09:53
+Fixed sanitization of inputs into sqlite databases using tuples
+Now allows ' and " in stories
