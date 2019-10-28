@@ -76,7 +76,7 @@ def browse():
     if 'username' not in session:
         return redirect("/login")
     username=session['username']
-    print(+"\nUsername being fed to getOtherStories:"+username+"\ngetOtherStories(cursor,username):"+db.getOtherStories(cursor, username)+"\n")
+    print("\nUsername being fed to getOtherStories:"+username+"\ngetOtherStories(cursor,username):"+db.getOtherStories(cursor, username)+"\n")
     return render_template("browse.html", user=username, stories=db.getOtherStories(cursor, username))
 
 # Contribution page
@@ -105,7 +105,7 @@ def contributeAdd():
     db.addEntry(cursor, title, text, author)
     connector.commit()
     return redirect("/browse")
-    
+
 
 # Authentication page for login
 # Adds username to session

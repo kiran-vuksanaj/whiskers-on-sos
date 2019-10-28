@@ -218,3 +218,6 @@ added first iteration of lastEntry function
 sontagC -- 2019-10-27 20:17
 Pass imaginary Jinja variable "latest" to contribute.html, using imaginary method db.lastEntry() (They haven't been coded yet)
 Added debugging for contribute page
+
+friedH -- 2019-10-27 20:33
+fix typo in app.py
