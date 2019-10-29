@@ -285,3 +285,7 @@ Now allows ' and " in stories
 chanM -- 2019-10-28 10:16
 Made error when trying to submit an empty story title
 Fixed small spacing between flashed messages on home page
+
+chanM -- 2019-10-29 04:32
+Fixed browsing stories
+BUG: no quotes allowed in story titles
