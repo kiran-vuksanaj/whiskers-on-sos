@@ -60,9 +60,9 @@ def getContributedStories(curse, username): # return a list of the titles of eve
 
 def getOtherStories(curse, username): # return a list of the titles of every NOT story contributed to by an author
     notContributedStories = []
-    executionStr = ("SELECT Title FROM stories WHERE Author != ?", (username,))
+    executionStr = (f"SELECT Title FROM stories WHERE Author != '{username}'")
     for contrTitle in getContributedStories(curse, username):
-        executionStr += ("AND Title != ?", (contrTitle,))
+        executionStr += (f" AND Title != '{contrTitle}'")
     cursorObject = curse.execute(executionStr)
     for titlesTuple in cursorObject:
         if (titlesTuple[0] not in notContributedStories):
