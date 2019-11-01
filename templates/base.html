@@ -17,6 +17,17 @@
             </title>
         {% endblock %}
     </head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/{% block stylesheet %}style.css{% endblock %}"
+    >
+      <!-- (
+              i know thats a cursed way of using blocks
+              but this enforces that all css files are in the right folder
+              and makes typos in the link tag less likely
+          )
+      -->
 
     <body>
         <center>
@@ -28,7 +39,7 @@
             </H2>
             <hr>
             <br>
-            
+
             <H1>
                 {% block pageTitle %}
                 Page Title
