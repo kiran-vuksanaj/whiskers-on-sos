@@ -17,14 +17,6 @@ Creating New Story
 {% endblock %}
 
 {% block content %}
-<H3>
-{% set msgs = get_flashed_messages() %}
-{% for msg in msgs %}
-<i>
-    Error: {{ msg }}
-</i>
-{% endfor %}
-</H3>
 
 <form action = "/create/authenticate", method = "POST">
     <H2>

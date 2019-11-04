@@ -21,12 +21,6 @@ Home
     Welcome <b>{{user}}</b>!
 </H2>
 
-{% set msgs = get_flashed_messages() %}
-{% for msg in msgs %}
-<i>
-    {{ msg }}
-</i>
-{% endfor %}
 <br><br>
 
 <form action="/login", method = "GET">
