@@ -33,6 +33,7 @@
       <p id="header-title">Smallpox Stories</p>
       <p id="tagline-text">Pass it Around!</p>
       <hr>
+      <br />
       {% block messages %}
       {% set msgs = get_flashed_messages() %}
       {% for msg in msgs %}
@@ -50,10 +51,12 @@
             {% endblock %}
         </p>
 
+	<div class="content">
         {% block content %}
           Content
         {% endblock %}
-
+	</div>
+	
         <footer>
           {% block footer %}
           COPYRIGHT &copy; 2019 Smallpox Stories<br>

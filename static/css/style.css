@@ -55,6 +55,12 @@ input[type=submit]:hover {
     background-color: #9ba293;
 }
 
+/* Content Wrapper */
+.content {
+    background-color: blue;
+    margin: 20px;
+}
+
 /* Header Text */
 
 #header-title {
