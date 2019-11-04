@@ -34,14 +34,14 @@
       <p id="tagline-text">Pass it Around!</p>
       <hr>
       {% block messages %}
-      <H3>
-	{% set msgs = get_flashed_messages() %}
-	{% for msg in msgs %}
-	<i>
-	  Error: {{ msg }}
-	</i>
-	{% endfor %}
-      </H3>
+      {% set msgs = get_flashed_messages() %}
+      {% for msg in msgs %}
+      <div class="message">
+	<p class="message-text">
+	  {{msg}}
+	</p>
+      </div>
+      {% endfor %}
       {% endblock %}
 
         <p id="page-title">
