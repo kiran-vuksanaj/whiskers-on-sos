@@ -1,3 +1,38 @@
+/*
+Clement Chan, Kiran Vuksanaj
+SoftDev1 pd1
+K21 -- CSS on p00
+2019-11-03
+
+Forked from p00/2/SOS
+  Credit to Matthew Chan, Hannah Fried, Coby Sontag, and Jionghao Wu for base code
+*/
+
+/* General tag modifications */
+
 body {
-  background-color:green;
+    background-color:#1B1F3B;
+    color: #F2FDFF;
+    font-family: "Courier New";
+}
+p {
+    margin: 0px;
+}
+footer {
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    opacity: 60%;
+    background-color: #9BA2A3;
+}
+
+
+/* Header Text */
+
+#header-title {
+    font-size: 24px;
+}
+#tagline-text {
+    font-size: 18px;
+    font-style: italic;
 }

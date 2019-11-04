@@ -30,33 +30,35 @@
       -->
 
     <body>
-        <center>
-            <H1><strong>
-                Smallpox Stories <small><i>-- Pass it Around!™</i></small>
-            </H1></strong>
-            <H2>
-                By Team SOS: Matthew Chan, Hannah Fried, Coby Sontag, Jionghao Wu
-            </H2>
-            <hr>
-            <br>
+      <p id="header-title">Smallpox Stories</p>
+      <p id="tagline-text">Pass it Around!</p>
+        <hr>
+        <br>
 
-            <H1>
-                {% block pageTitle %}
-                Page Title
-                {% endblock %}
-            </H1>
-
-            {% block content %}
-            Content
+        <H1>
+            {% block pageTitle %}
+              Page Title
             {% endblock %}
+        </H1>
 
-            <footer>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                {% block footer %}
-                COPYRIGHT &copy; 2019 Smallpox Stories<br>
-                DISCLAIMER: For Project #00 of Software Development Class
-                {% endblock %}
-            </footer>
-        </center>
+        {% block content %}
+          Content
+        {% endblock %}
+
+        <footer>
+          {% block footer %}
+          COPYRIGHT &copy; 2019 Smallpox Stories<br>
+          <br />
+	  Team SOS - Matthew Chan, Hannah Fried, Coby Sontag, Jionghao Wu<br />
+	  Softdev1 pd2<br />
+	  P00 -- Da Art of Storytellin'<br />
+	  2019-10-25<br />
+	  <br />
+	  Styling by Whiskers - Clement Chan, Kiran Vuksanaj<br />
+	  Softdev1 pd1<br />
+	  K21 -- Da Art of Stylin'<br />
+	  2019-11-03<br />
+          {% endblock %}
+        </footer>
     </body>
 </html>
