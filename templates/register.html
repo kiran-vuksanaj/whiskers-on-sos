@@ -27,15 +27,13 @@ Register
 </H3>
 
 <form action = "/register/authenticate", method = "POST">
-    Enter a username:
-    <input type = "text" name = "username" maxlength="12"> <br>
-    Enter a password:
-    <input type = "text" name = "password" maxlength="12"> <br>
-    <input type = "submit" name = "sub1" value = "Register">
+    <input type = "text" name = "username" placeholder="username" maxlength="12"> <br>
+    <input type = "password" name = "password" placeholder="password" maxlength="12"> <br>
+    <input type = "submit" name = "sub1" value = "register">
 </form>
 <br>
 <form action="/login", method = "GET">
-	<input type="submit" name="sub2" value="Cancel" >
+	<input type="submit" name="sub2" value="cancel" >
 </form>
 
 {% endblock %}
